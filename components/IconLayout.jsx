@@ -3,11 +3,8 @@ import React from "react";
 import { BiFilterAlt } from "react-icons/bi";
 const IconLayout = () => {
   return (
-    <div className="flex flex-grow justify-between my-2 w-[80vw]">
+    <div className="flex flex-grow justify-between my-2 ">
       <div className="flex flex-row gap-2">
-        {/* <select name="aa" id="a">
-        <option value="Filter"><BiFilterAlt/>filter</option>
-        </select> */}
         <button className="text-[#787486] flex flex-row text-[16px] items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
           <BiFilterAlt /> Filter{" "}
           <ArrowDown2 size="24" color="#787486" variant="Outline" />
@@ -23,7 +20,7 @@ const IconLayout = () => {
           <Profile2User size="24" color="#787486" variant="Outline" /> Share{" "}
         </button>
 
-        <div className='h-10 w-0 border-2 border-[#787486]'></div>
+        <div className="h-10 w-0 border-2 border-[#787486]"></div>
         <div>
           {" "}
           <svg

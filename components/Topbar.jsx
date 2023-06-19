@@ -10,8 +10,8 @@ import {
 
 export const Topbar = () => {
   return (
-    <div className="pl-72 h-20 border-b w-full fixed mt-2 justify-between pr-5 items-center flex ">
-      <div className=" flex flex-row rounded-lg bg-[#F5F5F5]   h-12 px-4 py-2  ml-5 w-1/3 items-center align-middle gap-3  ">
+    <div className="pl-60 h-16 border-b w-full fixed mt-2 justify-between pr-5 items-center flex ">
+      <div className=" flex flex-row rounded-lg bg-[#F5F5F5]   h-8 px-4 py-2  ml-5 w-1/3 items-center align-middle gap-3  ">
         <SearchNormal1 size="20" color="#697689" />
         <input
           type="text"
@@ -44,24 +44,5 @@ export const Topbar = () => {
         </div>
       </div>
     </div>
-    //     <div className="flex-grow  h-16 p-4  flex border-b pl-72  ">
-    //       <div className="flex flex-col  justify-between">
-    //         {/* head nav bar */}
-    //         <div className="flex flex-row gap-20 w-full  text-center items-center ">
-    //
-    //           {/* icon section */}
-    //           <div>
-    //            <div className="flex gap-5 ">
-
-    //             </div>
-
-    //           </div>
-    //           <div className="">
-
-    //           </div>
-    //           {/* profile section  */}
-    //         </div>
-    //       </div>
-    //     </div>
   );
 };

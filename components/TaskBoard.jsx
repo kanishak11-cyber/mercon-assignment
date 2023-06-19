@@ -4,6 +4,8 @@ import data from "@/utils/data";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import Image from "next/image";
 import { StrictModeDroppable } from "@/helper/StrictModeDroppable";
+import Mobileapp from "@/components/Mobileapp";
+import IconLayout from "@/components/IconLayout";
 
 const TaskBoard = () => {
   const [boardData, setBoardData] = useState(data);
@@ -40,14 +42,16 @@ const TaskBoard = () => {
   };
 
   return (
-    
+    <div>
+        <Mobileapp />
+          <IconLayout /> 
 
 <DragDropContext onDragEnd={handleDragEnd}>
-      <div className="grid lg:grid-cols-3 gap-5 mt-10 md:px-10 px-2 ">
+      <div className="grid lg:grid-cols-3 gap-5 my-5 md:px-10 px-2 ">
         {boardData?.map((item, sectionIndex) => {
           const { id, title: text, identityColor: markColor, tasks } = item;
           return (
-            <div key={id} className="rounded-2xl bg-[#F5F5F5] p-5">
+            <div key={id} className="rounded-2xl bg-[#F5F5F5] p-5 ">
               <div className="flex items-center space-x-2">
                 <span
                   style={{ backgroundColor: `${markColor}` }}
@@ -91,7 +95,7 @@ const TaskBoard = () => {
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                               ref={provided.innerRef}
-                              className={`my-5 rounded-2xl bg-white md:p-8 p-5   `}
+                              className={`my-3 rounded-2xl bg-white md:p-4 p-2   `}
                             >
                               <div className="flex items-center justify-between ">
                                 {/* Priority: Low, High, Completed */}
@@ -109,7 +113,7 @@ const TaskBoard = () => {
                                 >
                                   {priority}
                                 </span>
-                                <button className="text-2xl">...</button>
+                                <button className="text-2xl ">...</button>
                               </div>
                               {/* Task Card title */}
                               <h3 className="mt-2 text-lg font-semibold text-blackColor">
@@ -117,7 +121,7 @@ const TaskBoard = () => {
                               </h3>
                               {/* Card image */}
                               {image && (
-                                <div className="mt-5">
+                                <div className="mt-2">
                                   <Image 
                                     src={image}
                                     alt=""
@@ -142,7 +146,7 @@ const TaskBoard = () => {
                               )}
 
                               {/* Users image */}
-                              <div className="mt-10 flex items-center justify-between">
+                              <div className="mt-2 flex items-center justify-between">
                                 <div className="flex -space-x-2 overflow-hidden">
                                   {users.map((user, index) => {
                                     return (
@@ -157,14 +161,14 @@ const TaskBoard = () => {
                                 </div>
 
                                 {/* Comments and Files */}
-                                <div className="flex items-center justify-center space-x-5 text-xs font-medium text-grayColor">
-                                  <div className="flex items-center justify-center space-x-2">
+                                <div className="flex items-center justify-center space-x-3 text-xs font-medium text-grayColor">
+                                  <div className="flex items-center justify-center space-x-1">
                                     <Message />
-                                    <span className="">
+                                    <span className="flex">
                                       {comments} comments
                                     </span>
                                   </div>
-                                  <div className="flex items-center justify-center space-x-2">
+                                  <div className="flex items-center justify-center space-x-1">
                                     <FolderMinus />
                                     <span className="">{files} files</span>
                                   </div>
@@ -185,7 +189,7 @@ const TaskBoard = () => {
       </div>
     </DragDropContext>
 
-   
+   </div>
     
   );
 };

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Logo from "@/asset/logo.png";
 import { Inter } from "@next/font/google";
+import styles from "@/styles/Home.module.css"
 import {
   AddSquare,
-  ArrowLeft2,
   Category,
   LampOn,
   Message,
@@ -20,14 +20,17 @@ export const Nav = () => {
     inactiveLink + " bg-slate-100 text-[5030E5] font-bold rounded-xl ";
   return (
     <div
-      className={` fixed inset-y-0 left-0 bg-white border-r w-72 ${inter.className}  `}
+      className={` fixed inset-y-0 left-0 bg-white border-r w-60 ${inter.className} ${styles.scroll} overflow-y-scroll no-scrollbar`}
     >
-      <div className="h-20 items-center align-center ">
+      <div className="h-16 items-center align-center ">
         <div className="h-12 flex gap-2 items-center align-center  mt-5 mx-4">
           <Image src={Logo} height={40} width={40} />
-          <span className="text-[#0D062D] font-bold text-3xl align-middle flex items-center ">
+          <span className="text-[#0D062D] font-bold text-xl align-middle flex items-center ">
             Project M.
+            <button>
             <HiChevronDoubleLeft className="text-[#697689]" />
+
+            </button>
           </span>
         </div>
       </div>
@@ -35,37 +38,37 @@ export const Nav = () => {
       <ul className="gap-1 px-4 mx-2 border-b text-[#787486] flex flex-col">
         <li className="flex items-center my-2">
           <Category size="32" color="#787486" padding="2px" />
-          <span className="text-2xl px-2 py-1">Home</span>
+          <span className="text-md px-2 py-1">Home</span>
         </li>
 
         <li className="flex items-center my-2 ">
           <Message size="32" color="#787486" />
-          <span className="text-2xl px-2 py-1">Messages</span>
+          <span className="text-md px-2 py-1">Messages</span>
         </li>
 
         <li className="flex items-center my-2 ">
           <TaskSquare size="32" color="#787486" />
-          <span className="text-2xl px-2 py-1">Task</span>
+          <span className="text-md px-2 py-1">Task</span>
         </li>
 
         <li className="flex items-center my-2 ">
           <Profile2User size="32" color="#787486" />
-          <span className="text-2xl px-2 py-1">Members</span>
+          <span className="text-md px-2 py-1">Members</span>
         </li>
         <li className="flex items-center my-2 ">
           <Setting2 size="32" color="#787486" />
-          <span className="text-2xl px-2 py-1">Setting</span>
+          <span className="text-md px-2 py-1">Setting</span>
         </li>
       </ul>
 
-      <div className="flex flex-row text-[#697689] text-xl font-bold px-2 py-1 justify-between">
+      <div className="flex flex-row text-[#697689] text-md my-1 mx-2 font-bold px-2 py-1 justify-between">
         <div>MY PROJECTS</div>
         <div>
           <AddSquare size="24" color="#787486" className="mr-4 mx-4" />
         </div>
       </div>
 
-      <ul className="border-b">
+      <ul className="border-b my-1 mx-2">
         <li className={activeLink}>
           <div className="w-2 h-2 bg-[#7AC555] rounded-full"></div>
 
