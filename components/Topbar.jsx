@@ -21,9 +21,16 @@ export const Topbar = () => {
       </div>
       <div className="flex justify-between gap-16" >
         <div className="flex gap-5 items-center">
-          <Calendar2 size="32" color="#697689" variant="TwoTone" />
-          <MessageQuestion size="32" color="#697689" variant="TwoTone" />
-          <Notification size="32" color="#697689" variant="TwoTone" />
+          <ul className="flex gap-5 items-center ">
+            <li><Calendar2 size="32" color="#697689" variant="TwoTone" /></li>
+            <li><MessageQuestion size="32" color="#697689" variant="TwoTone" /></li>
+            <li><div className="w-2 h-2 ml-4 -mb-2 rounded-full z-10 bg-[#D8727D] "></div>
+          <Notification size="32" color="#697689" variant="TwoTone" className="-z-10"/></li>
+            
+          </ul>
+          
+          
+          
         </div>
         <div className='flex flex-row  gap-4 text-center items-center justify-end'>
           <h1 className="text-[16px] flex-col flex text-[#0D062D] font-bold ">

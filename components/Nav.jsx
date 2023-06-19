@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Logo from "@/asset/logo.png";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css"
+import styles from "@/styles/Home.module.css";
 import {
   AddSquare,
   Category,
@@ -22,14 +22,13 @@ export const Nav = () => {
     <div
       className={` fixed inset-y-0 left-0 bg-white border-r w-60 ${inter.className} ${styles.scroll} overflow-y-scroll no-scrollbar`}
     >
-      <div className="h-16 items-center align-center fixed ">
+      <div className="h-16 items-center align-center fixed  ">
         <div className="h-12 flex gap-2 items-center align-center  mt-5 mx-4">
           <Image src={Logo} height={40} width={40} />
           <span className="text-[#0D062D] font-bold text-xl align-middle flex items-center ">
             Project M.
             <button>
-            <HiChevronDoubleLeft className="text-[#697689]" />
-
+              <HiChevronDoubleLeft className="text-[#697689]" />
             </button>
           </span>
         </div>
@@ -69,10 +68,11 @@ export const Nav = () => {
       </div>
 
       <ul className="border-b my-1 mx-2">
-        <li className={activeLink}>
+        <li className={`${activeLink} `}>
           <div className="w-2 h-2 bg-[#7AC555] rounded-full"></div>
-
-          <span className="text-[16px]">Mobile App</span>
+          
+          <div className="flex gap-16"> <div className="text-[16px]">Mobile App</div>
+          <div className="">...</div></div>
         </li>
         <li className={inactiveLink}>
           <div className="w-2 h-2 bg-[#FFA500] rounded-full"></div>

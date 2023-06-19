@@ -4,8 +4,8 @@ import { BiFilterAlt } from "react-icons/bi";
 const IconLayout = () => {
   return (
     <div className="flex flex-grow justify-between my-2 ">
-      <div className="flex flex-row gap-2">
-        <button className="text-[#787486] flex flex-row text-[16px] items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
+      <div className="flex  xs:flex-col flex-row gap-2">
+        <button className="text-[#787486] flex flex-row  text-md items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
           <BiFilterAlt /> Filter{" "}
           <ArrowDown2 size="24" color="#787486" variant="Outline" />
         </button>

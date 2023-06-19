@@ -7,8 +7,8 @@ import { AddSquare } from "iconsax-react";
 
 const Mobileapp = () => {
   return (
-    <div className='flex flex-grow justify-between w-full'>
-      <div className="text-[46px] text-[ #0D062D] font-bold flex flex-row items-center text-center gap-3">
+    <div className='flex flex-grow justify-between xs:justify-center xs:flex-col w-full'>
+      <div className="text-5xl xs:text-md text-[ #0D062D] font-bold flex flex-row items-center text-center gap-3">
         Mobile App 
         <button>
             <TbPencil className='text-[#5030E5] text-[32px] bg-[#dcd6fa] rounded-xl p-1' />
