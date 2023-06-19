@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Logo from "@/asset/logo.png";
 import { Inter } from "@next/font/google";
@@ -7,128 +5,111 @@ import {
   AddSquare,
   ArrowLeft2,
   Category,
+  LampOn,
   Message,
   Profile2User,
   Setting2,
   TaskSquare,
 } from "iconsax-react";
-import {HiChevronDoubleLeft} from 'react-icons/hi'
+import { HiChevronDoubleLeft } from "react-icons/hi";
 const inter = Inter({ subsets: ["latin"] });
 export const Nav = () => {
-  const router = useRouter();
   const inactiveLink =
     "flex gap-2 w-full my-2 align-middle text-center items-center  px-4 py-2  rounded-lg";
-  const activeLink = inactiveLink + " bg-slate-100 text-[5030E5] font-bold rounded-xl ";
-  const { pathname } = router;
+  const activeLink =
+    inactiveLink + " bg-slate-100 text-[5030E5] font-bold rounded-xl ";
   return (
-    <aside className=" p-4 pr-0  border-r my-4  ">
-      <Link href="/" className="flex gap-1 my-4 border-b  mr-4">
-        <div className="flex flex-row gap-2 ">
+    <div
+      className={` fixed inset-y-0 left-0 bg-white border-r w-72 ${inter.className}  `}
+    >
+      <div className="h-20 items-center align-center ">
+        <div className="h-12 flex gap-2 items-center align-center  mt-5 mx-4">
           <Image src={Logo} height={40} width={40} />
-        <span className="text-[#0D062D] font-bold text-[20px] align-middle flex items-center gap-x-4">
-          Project M.
-          <HiChevronDoubleLeft className="text-[#697689]"/>
-        </span>
-        
+          <span className="text-[#0D062D] font-bold text-3xl align-middle flex items-center ">
+            Project M.
+            <HiChevronDoubleLeft className="text-[#697689]" />
+          </span>
         </div>
-        
-      </Link>
-
-      <nav className="flex flex-col gap-2 text-[#787486]">
-        <Link href="" className="flex gap-2 ">
-          <Category size="32" color="#787486" />
-          <span>Home</span>
-        </Link>
-
-        <Link href="" className="flex gap-1 ">
-          <Message size="32" color="#787486" />
-          <span>Messages</span>
-        </Link>
-
-        <Link href="" className="flex gap-1 ">
-          <TaskSquare size="32" color="#787486" />
-          <span>task</span>
-        </Link>
-
-        <Link href="" className="flex gap-1 ">
-          <Profile2User size="32" color="#787486" />
-          <span>Members</span>
-        </Link>
-
-        <Link href="" className="flex gap-1 ">
-          <Setting2 size="32" color="#787486" />
-          <span>Setting</span>
-        </Link>
-        <hr className=" mx-1 py-2" />
-      </nav>
-
-      <div className="font-bold flex flex-col gap-2 text-[12px] text-[#787486]">
-        <span className="flex flex-row">
-          MY PROJECTS
-          <AddSquare size="24" color="#787486" className="mr-4 mx-4" />
-        </span>
       </div>
-      <Link
-        href="/mobile"
-        className={pathname === "/mobile" || pathname === '/' ? activeLink : inactiveLink}
-      >
-        <svg
-          width="8"
-          height="8"
-          viewBox="0 0 8 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="4" cy="4" r="4" fill="#7AC555" />
-        </svg>
-        <h1 className="text-[16px]">Mobile App</h1>
-      </Link>
-      <Link
-        href="/website"
-        className={pathname.includes("/website") ? activeLink : inactiveLink}
-      >
-        <svg
-          width="8"
-          height="8"
-          viewBox="0 0 8 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="4" cy="4" r="4" fill="#FFA500" />
-        </svg>
-        <span className="text-[16px]">Website Redesign</span>
-      </Link>
-      <Link
-        href="/design"
-        className={pathname.includes("/design") ? activeLink : inactiveLink}
-      >
-        <svg
-          width="8"
-          height="8"
-          viewBox="0 0 8 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="4" cy="4" r="4" fill="#E4CCFD" />
-        </svg>
-        <span className="text-[16px]">Design System</span>
-      </Link>
 
-      <Link
-        href="/wireframe"
-        className={pathname.includes("/wireframe") ? activeLink : inactiveLink}
-      >
-        <svg
-          width="8"
-          height="8"
-          viewBox="0 0 8 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="4" cy="4" r="4" fill="#76A5EA" />
-        </svg>
-        <span className="text-[16px]">Wireframe</span>
-      </Link>
-    </aside>
+      <ul className="gap-1 px-4 mx-2 border-b text-[#787486] flex flex-col">
+        <li className="flex items-center my-2">
+          <Category size="32" color="#787486" padding="2px" />
+          <span className="text-2xl px-2 py-1">Home</span>
+        </li>
+
+        <li className="flex items-center my-2 ">
+          <Message size="32" color="#787486" />
+          <span className="text-2xl px-2 py-1">Messages</span>
+        </li>
+
+        <li className="flex items-center my-2 ">
+          <TaskSquare size="32" color="#787486" />
+          <span className="text-2xl px-2 py-1">Task</span>
+        </li>
+
+        <li className="flex items-center my-2 ">
+          <Profile2User size="32" color="#787486" />
+          <span className="text-2xl px-2 py-1">Members</span>
+        </li>
+        <li className="flex items-center my-2 ">
+          <Setting2 size="32" color="#787486" />
+          <span className="text-2xl px-2 py-1">Setting</span>
+        </li>
+      </ul>
+
+      <div className="flex flex-row text-[#697689] text-xl font-bold px-2 py-1 justify-between">
+        <div>MY PROJECTS</div>
+        <div>
+          <AddSquare size="24" color="#787486" className="mr-4 mx-4" />
+        </div>
+      </div>
+
+      <ul className="border-b">
+        <li className={activeLink}>
+          <div className="w-2 h-2 bg-[#7AC555] rounded-full"></div>
+
+          <span className="text-[16px]">Mobile App</span>
+        </li>
+        <li className={inactiveLink}>
+          <div className="w-2 h-2 bg-[#FFA500] rounded-full"></div>
+          <span className="text-[16px]">Website Redesign</span>
+        </li>
+        <li className={inactiveLink}>
+          <div className="w-2 h-2 bg-[#E4CCFD] rounded-full"></div>
+
+          <span className="text-[16px]">Design System</span>
+        </li>
+        <li className={inactiveLink}>
+          <div className="w-2 h-2 bg-[#76A5EA] rounded-full"></div>
+
+          <span className="text-[16px]">Wireframe</span>
+        </li>
+      </ul>
+
+      <div className=" relative mt-20 rounded-2xl bg-[#5030E514] mx-5  ">
+        <div className=" absolute inset-x-0 -top-12 flex items-center justify-center ">
+          <div className=" flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 backdrop-blur-xl ">
+            <div className=" bg-[#FCD64AB2] rounded-full w-10 h-10 ">
+              <div className=" absolute flex justify-center items-center backdrop-blur-md w-16 h-16 top-0 right-0 left-0 rounded-full ">
+                <LampOn variant="Bulk" size="34" color="#FBCB18" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=" flex flex-col items-center justify-center space-y-5 px-10 lg:px-5 py-5 mb-20 ">
+          <p className=" mt-3 font-medium text-black ">Thoughts Time</p>
+          <p className=" text-center text-xs text-grayColor ">
+            We don't have any notice for you, till then you can share your
+            thoughts with your peers.
+          </p>
+
+          <input
+            className=" rounded m-2 p-2 bg-white px-6 lg:px-3 py-3 text-center text-sm font-medium text-black"
+            placeholder="Write a message"
+          />
+        </div>
+      </div>
+    </div>
   );
 };

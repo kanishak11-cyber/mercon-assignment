@@ -1,12 +1,12 @@
-import user1 from "@/asset/1.png";
-import user2 from "@/asset/2.png";
-import user3 from "@/asset/3.png";
-import user4 from "@/asset/4.png";
-import user5 from "@/asset/5.png";
-import demo1 from "@/asset/demo_1.jpg";
-import demo2 from "@/asset/demo_2.jpg";
+import user1 from "../asset/1.png";
+import user2 from "../asset/2.png";
+import user3 from "../asset/3.png";
+import user4 from "../asset/4.png";
+import user5 from "../asset/5.png";
+import demo1 from "../asset/demo_1.jpg";
+import demo2 from "../asset/demo_2.jpg";
 
-export const data = [
+const data = [
   {
     id: 1,
     title: "to do",
@@ -180,3 +180,4 @@ export const data = [
     ],
   },
 ];
+export default data;

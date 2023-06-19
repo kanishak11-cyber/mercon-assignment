@@ -20,7 +20,7 @@ const Mobileapp = () => {
       </div>
       <div className="flex flex-row gap-3 my-4">
         <button className="text-[#5030E5] text-[16px] font-normal flex flex-row gap-2 items-center text-center ">
-        <AddSquare size="28" color="#5030E5" variant="Outline" backgroundColor='#dcd6fa'/>
+        <AddSquare size="28" color="#5030E5" variant="Outline" backgroundcolor='#dcd6fa'/>
             Invite
         </button>
         <Image 
