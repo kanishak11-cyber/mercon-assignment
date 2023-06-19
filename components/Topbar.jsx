@@ -10,8 +10,8 @@ import {
 
 export const Topbar = () => {
   return (
-    <div className="pl-72 h-20 border-b w-full fixed mt-2 justify-between pr-5 items-center flex">
-      <div className=" flex flex-row rounded-lg bg-[#F5F5F5]   h-12 px-4 py-2  ml-5 w-1/3 items-center align-middle gap-3 ">
+    <div className="pl-72 h-20 border-b w-full fixed mt-2 justify-between pr-5 items-center flex ">
+      <div className=" flex flex-row rounded-lg bg-[#F5F5F5]   h-12 px-4 py-2  ml-5 w-1/3 items-center align-middle gap-3  ">
         <SearchNormal1 size="20" color="#697689" />
         <input
           type="text"
