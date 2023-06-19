@@ -3,7 +3,6 @@ import { FolderMinus, Message } from "iconsax-react";
 import data from "@/utils/data";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import Image from "next/image";
-import { StrictModeDroppable } from "@/helper/StrictModeDroppable";
 import Mobileapp from "@/components/Mobileapp";
 import IconLayout from "@/components/IconLayout";
 

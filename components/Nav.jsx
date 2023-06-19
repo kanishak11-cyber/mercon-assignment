@@ -22,7 +22,7 @@ export const Nav = () => {
     <div
       className={` fixed inset-y-0 left-0 bg-white border-r w-60 ${inter.className} ${styles.scroll} overflow-y-scroll no-scrollbar`}
     >
-      <div className="h-16 items-center align-center ">
+      <div className="h-16 items-center align-center fixed ">
         <div className="h-12 flex gap-2 items-center align-center  mt-5 mx-4">
           <Image src={Logo} height={40} width={40} />
           <span className="text-[#0D062D] font-bold text-xl align-middle flex items-center ">
@@ -35,7 +35,7 @@ export const Nav = () => {
         </div>
       </div>
 
-      <ul className="gap-1 px-4 mx-2 border-b text-[#787486] flex flex-col">
+      <ul className="gap-1 px-4 mx-2 border-b pt-16 text-[#787486] flex flex-col">
         <li className="flex items-center my-2">
           <Category size="32" color="#787486" padding="2px" />
           <span className="text-md px-2 py-1">Home</span>
