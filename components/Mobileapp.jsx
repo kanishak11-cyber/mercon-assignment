@@ -7,7 +7,7 @@ import { AddSquare } from "iconsax-react";
 
 const Mobileapp = () => {
   return (
-    <div className='md:flex md:flex-grow flex-cols-2  justify-center md:justify-between flex-row w-full'>
+    <div className='md:flex md:flex-grow  justify-between flex-row w-full'>
       <div className="text-2xl md:text-3xl lg:text-5xl text-[ #0D062D] font-bold flex  items-center text-center gap-3">
         Mobile App 
         

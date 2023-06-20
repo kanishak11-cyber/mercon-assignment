@@ -6,13 +6,24 @@ import {
   Notification,
   SearchNormal1,
   ArrowDown2,
+  HambergerMenu,
 } from "iconsax-react";
 
 
 export const Topbar = () => {
+  
   return (
-    <div className="md:pl-60 pl-20 lg:h-16 h-20 border-b w-full fixed mt-2 justify-between pr-5 items-center flex flex-col  lg:flex-row opacity-100  bg-white ">
+    <div className="md:pl-60 pl-40  h-20 border-b w-full fixed mt-2 justify-between pr-5 items-center flex flex-col  lg:flex-row opacity-100  bg-white ">
+      
       <div className=" flex flex-row rounded-lg bg-[#F5F5F5]   h-8 px-4 py-2  ml-5 w-full  lg:w-1/3 items-center align-middle gap-3  ">
+         <div className=' md:hidden lg:hidden visible'>
+          <button className="focus:outline-none"
+          >
+            <HambergerMenu size="20" color="#697689"/>
+          </button>
+      
+      </div>
+        
         <SearchNormal1 size="20" color="#697689" />
         <input
           type="text"

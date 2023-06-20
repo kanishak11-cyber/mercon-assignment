@@ -21,57 +21,54 @@ export const Nav = () => {
   const activeLink =
     inactiveLink + " bg-slate-100 text-[5030E5] font-bold rounded-xl ";
 
-  const [open, setOpen] = useState(false);
-  const closeToggle = () => {
-    setOpen(!open);
-  };
+  
 
   return (
     <div
-      className={` fixed inset-y-0 left-0 bg-white z-10 border-r lg:w-60 w-0 ${inter.className}  overflow-y-scroll no-scrollbar`}
+      className={` fixed inset-y-0 left-0 bg-white z-10 border-r lg:w-60 w-40 ${inter.className}  overflow-y-scroll no-scrollbar`}
     >
-      <div className="h-16 items-center align-center   ">
-        <div className="h-12 flex gap-2 items-center align-center border-b mt-6 px-4">
-          <Image src={Logo} height={40} width={40} />
-          <span className="text-[#0D062D] font-bold text-xl align-middle flex items-center ">
+      <div className=" h-20 items-center align-center   ">
+        <div className="h-20 flex gap-2 items-center align-center border-b mt-4 px-4">
+          <Image src={Logo} height={40} width={40} className="w-4 h-4 lg:w-10 lg:h-10" />
+          <span className="text-[#0D062D] font-bold lg:text-xl text-sm align-middle flex items-center ">
             Project M.
-            <button onClick={()=>({closeToggle})}>
+            <button >
               <HiChevronDoubleLeft className="text-[#697689]" />
             </button>
           </span>
         </div>
       </div>
 
-      <ul className="gap-1 px-4 mx-2 border-b  text-[#787486] flex flex-col text-md xs:text-xs">
+      <ul className="gap-1 px-4 mx-2 border-b  text-[#787486] flex flex-col lg:text-md text-xs">
         <li className="flex items-center my-2">
-          <Category size="28" color="#787486" padding="2px" />
+          <Category size="20" color="#787486" padding="2px" />
           <span className=" px-2 py-1">Home</span>
         </li>
 
         <li className="flex items-center my-2 ">
-          <Message size="32" color="#787486" />
+          <Message size="20" color="#787486" />
           <span className="text-md px-2 py-1">Messages</span>
         </li>
 
         <li className="flex items-center my-2 ">
-          <TaskSquare size="32" color="#787486" />
+          <TaskSquare size="20" color="#787486" />
           <span className="text-md px-2 py-1">Task</span>
         </li>
 
         <li className="flex items-center my-2 ">
-          <Profile2User size="32" color="#787486" />
+          <Profile2User size="20" color="#787486" />
           <span className="text-md px-2 py-1">Members</span>
         </li>
         <li className="flex items-center my-2 ">
-          <Setting2 size="32" color="#787486" />
+          <Setting2 size="20" color="#787486" />
           <span className="text-md px-2 py-1">Setting</span>
         </li>
       </ul>
 
-      <div className="flex flex-row text-[#697689] text-md my-1 mx-2 font-bold px-2 py-1 justify-between">
+      <div className="flex flex-row text-[#697689] lg:text-md text-xs my-1 mx-2 font-bold lg:px-2 px-0 py-1 justify-between">
         <div>MY PROJECTS</div>
         <div>
-          <AddSquare size="24" color="#787486" className="mr-4 mx-4" />
+          <AddSquare size="20" color="#787486" className="lg:mr-4 lg:mx-4 mx-1 mr-1" />
         </div>
       </div>
 
@@ -79,44 +76,44 @@ export const Nav = () => {
         <li className={`${activeLink} `}>
           <div className="w-2 h-2 bg-[#7AC555] rounded-full"></div>
           
-          <div className="flex gap-16"> <div className="text-[16px]">Mobile App</div>
+          <div className="flex lg:gap-16 gap-2"> <div className="lg:text-[16px] text-[10px]">Mobile App</div>
           <div className="">...</div></div>
         </li>
         <li className={inactiveLink}>
           <div className="w-2 h-2 bg-[#FFA500] rounded-full"></div>
-          <span className="text-[16px]">Website Redesign</span>
+          <span className="lg:text-[16px] text-[10px]">Website Redesign</span>
         </li>
         <li className={inactiveLink}>
           <div className="w-2 h-2 bg-[#E4CCFD] rounded-full"></div>
 
-          <span className="text-[16px]">Design System</span>
+          <span className="lg:text-[16px] text-[10px]">Design System</span>
         </li>
         <li className={inactiveLink}>
           <div className="w-2 h-2 bg-[#76A5EA] rounded-full"></div>
 
-          <span className="text-[16px]">Wireframe</span>
+          <span className="lg:text-[16px] text-[10px]">Wireframe</span>
         </li>
       </ul>
 
       <div className=" relative mt-20 rounded-2xl bg-[#5030E514] mx-5  ">
         <div className=" absolute inset-x-0 -top-12 flex items-center justify-center ">
-          <div className=" flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 backdrop-blur-xl ">
-            <div className=" bg-[#FCD64AB2] rounded-full w-10 h-10 ">
-              <div className=" absolute flex justify-center items-center backdrop-blur-md w-16 h-16 top-0 right-0 left-0 rounded-full ">
+          <div className=" flex h-16  w-16  items-center justify-center rounded-full bg-gray-100 backdrop-blur-xl ">
+            <div className=" bg-[#FCD64AB2] rounded-full w-10 h-10  ">
+              <div className=" absolute flex justify-center items-center backdrop-blur-md w-16  h-16 top-0 right-0 left-0 rounded-full ">
                 <LampOn variant="Bulk" size="34" color="#FBCB18" />
               </div>
             </div>
           </div>
         </div>
-        <div className=" flex flex-col items-center justify-center space-y-5 px-10 lg:px-5 py-5 mb-20 ">
-          <p className=" mt-3 font-medium text-black ">Thoughts Time</p>
-          <p className=" text-center text-xs text-grayColor ">
+        <div className=" flex flex-col items-center justify-center space-y-5 lg:px-10 px-4 py-5 mb-20 ">
+          <p className=" mt-3 font-medium text-black text-[10px] lg:text-[16px]">Thoughts Time</p>
+          <p className=" lg:text-center text-justify text-[8px] lg:text-[16px] text-grayColor ">
             We don't have any notice for you, till then you can share your
             thoughts with your peers.
           </p>
 
           <input
-            className=" rounded m-2 p-2 bg-white px-6 lg:px-3 py-3 text-center text-sm font-medium text-black"
+            className=" rounded-xl  bg-white px-1 lg:px-6 py-1 m-1 lg:m-3 text-center text-[10px] lg:text-[16px] font-medium text-black"
             placeholder="Write a message"
           />
         </div>
