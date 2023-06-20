@@ -7,18 +7,19 @@ import { AddSquare } from "iconsax-react";
 
 const Mobileapp = () => {
   return (
-    <div className='flex flex-grow justify-between xs:justify-center xs:flex-col w-full'>
-      <div className="text-5xl xs:text-md text-[ #0D062D] font-bold flex flex-row items-center text-center gap-3">
+    <div className='md:flex md:flex-grow flex-cols-2  justify-center md:justify-between flex-row w-full'>
+      <div className="text-2xl md:text-3xl lg:text-5xl text-[ #0D062D] font-bold flex  items-center text-center gap-3">
         Mobile App 
+        
         <button>
-            <TbPencil className='text-[#5030E5] text-[32px] bg-[#dcd6fa] rounded-xl p-1' />
+            <TbPencil className='text-[#5030E5] md:text-[32px]  text-md bg-[#dcd6fa] rounded-xl p-1' />
         </button>
         <button>
-            <FiLink2 className='text-[#5030E5] text-[32px] bg-[#dcd6fa] rounded-xl p-1' />
+            <FiLink2 className='text-[#5030E5] md:text-[32px] text-md bg-[#dcd6fa] rounded-xl p-1' />
         </button>
          
       </div>
-      <div className="flex flex-row gap-3 my-4">
+      <div className="flex flex-row  gap-3 my-4">
         <button className="text-[#5030E5] text-[16px] font-normal flex flex-row gap-2 items-center text-center ">
         <AddSquare size="28" color="#5030E5" variant="Outline" backgroundcolor='#dcd6fa'/>
             Invite

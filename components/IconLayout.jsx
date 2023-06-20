@@ -3,20 +3,21 @@ import React from "react";
 import { BiFilterAlt } from "react-icons/bi";
 const IconLayout = () => {
   return (
-    <div className="flex flex-grow justify-between my-2 ">
-      <div className="flex  xs:flex-col flex-row gap-2">
-        <button className="text-[#787486] flex flex-row  text-md items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
+    <div className="flex flex-grow justify-between  my-2 ">
+      <div className="flex  flex-col md:flex-row lg:flex-row gap-2">
+        {/* text-xl  sm:text-xl md:text-3xl lg:text-5xl */}
+        <button className="text-[#787486] flex flex-row  text-md  sm:text-xs md:text-lg lg:text-xl items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
           <BiFilterAlt /> Filter{" "}
           <ArrowDown2 size="24" color="#787486" variant="Outline" />
         </button>
 
-        <button className="text-[#787486] flex flex-row text-[16px] items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
+        <button className="text-[#787486] flex flex-row text-md  sm:text-xs md:text-lg lg:text-xl items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
           <Calendar size="24" color="#787486" variant="Outline" /> Today{" "}
           <ArrowDown2 size="24" color="#787486" variant="Outline" />
         </button>
       </div>
-      <div className="flex flex-row gap-2 items-center text-center">
-        <button className="text-[#787486] flex flex-row text-[16px] items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
+      <div className="md:flex grid-cols-2 grid md:flex-row lg:flex-row  gap-2 items-center text-center">
+        <button className="text-[#787486] flex flex-row  text-md  sm:text-xs md:text-lg lg:text-xl  items-center text-center align-middle gap-1 border-[#787486] border-2 rounded-md p-1">
           <Profile2User size="24" color="#787486" variant="Outline" /> Share{" "}
         </button>
 

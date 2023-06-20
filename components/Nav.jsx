@@ -12,32 +12,40 @@ import {
   TaskSquare,
 } from "iconsax-react";
 import { HiChevronDoubleLeft } from "react-icons/hi";
+import {useState} from 'react'
+
 const inter = Inter({ subsets: ["latin"] });
 export const Nav = () => {
   const inactiveLink =
     "flex gap-2 w-full my-2 align-middle text-center items-center  px-4 py-2  rounded-lg";
   const activeLink =
     inactiveLink + " bg-slate-100 text-[5030E5] font-bold rounded-xl ";
+
+  const [open, setOpen] = useState(false);
+  const closeToggle = () => {
+    setOpen(!open);
+  };
+
   return (
     <div
-      className={` fixed inset-y-0 left-0 bg-white border-r w-60 ${inter.className} ${styles.scroll} overflow-y-scroll no-scrollbar`}
+      className={` fixed inset-y-0 left-0 bg-white z-10 border-r lg:w-60 w-0 ${inter.className}  overflow-y-scroll no-scrollbar`}
     >
-      <div className="h-16 items-center align-center fixed  ">
-        <div className="h-12 flex gap-2 items-center align-center  mt-5 mx-4">
+      <div className="h-16 items-center align-center   ">
+        <div className="h-12 flex gap-2 items-center align-center border-b mt-6 px-4">
           <Image src={Logo} height={40} width={40} />
           <span className="text-[#0D062D] font-bold text-xl align-middle flex items-center ">
             Project M.
-            <button>
+            <button onClick={()=>({closeToggle})}>
               <HiChevronDoubleLeft className="text-[#697689]" />
             </button>
           </span>
         </div>
       </div>
 
-      <ul className="gap-1 px-4 mx-2 border-b pt-16 text-[#787486] flex flex-col">
+      <ul className="gap-1 px-4 mx-2 border-b  text-[#787486] flex flex-col text-md xs:text-xs">
         <li className="flex items-center my-2">
-          <Category size="32" color="#787486" padding="2px" />
-          <span className="text-md px-2 py-1">Home</span>
+          <Category size="28" color="#787486" padding="2px" />
+          <span className=" px-2 py-1">Home</span>
         </li>
 
         <li className="flex items-center my-2 ">
