@@ -7,10 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   
   return (
-    <Layout className={inter.className}>
-      <div className=" mx-4 my-2">
+    
+      <main className=" mx-4 my-2">
         <TaskBoard />
-      </div>
-    </Layout>
+      </main>
+    
   );
 }

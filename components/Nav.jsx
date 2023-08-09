@@ -1,7 +1,4 @@
-import Image from "next/image";
-import Logo from "@/asset/logo.png";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import {
   AddSquare,
   Category,
@@ -12,10 +9,34 @@ import {
   TaskSquare,
 } from "iconsax-react";
 import { HiChevronDoubleLeft } from "react-icons/hi";
-import {useState} from 'react'
+
 
 const inter = Inter({ subsets: ["latin"] });
 export const Nav = () => {
+
+  const dot =[
+    {
+      "icon": <Category size="24" />,
+      "title": "Home",
+    },
+    {
+      "icon": <Message size="24"  />,
+      "title": "Messages",
+    },
+    {
+      "icon": <TaskSquare size="24"  />,
+      "title": "Task",
+    },
+    {
+      "icon": <Profile2User size="24"  />,
+      "title": "Members",
+    },
+    {
+      "icon": <Setting2 size="24"   />,
+      "title": "Setting",
+    },
+  ]
+
   const inactiveLink =
     "flex gap-2 w-full my-2 align-middle text-center items-center  px-4 py-2  rounded-lg";
   const activeLink =
@@ -25,45 +46,31 @@ export const Nav = () => {
 
   return (
     <div
-      className={` fixed inset-y-0 left-0 bg-white z-10 border-r lg:w-60 w-40 ${inter.className}  overflow-y-scroll no-scrollbar`}
+      className={` fixed inset-y-0 left-0 bg-white z-10 border-r mt-2 lg:w-60 w-40 ${inter.className}  overflow-y-scroll no-scrollbar`}
     >
       <div className=" h-20 items-center align-center   ">
         <div className="h-20 flex gap-2 items-center align-center border-b mt-4 px-4">
-          <Image src={Logo} height={40} width={40} className="w-4 h-4 lg:w-10 lg:h-10" />
+          <img src='/asset/logo.png' height={40} width={40} className="w-4 h-4 lg:w-10 lg:h-10" />
           <span className="text-[#0D062D] font-bold lg:text-xl text-sm align-middle flex items-center ">
             Project M.
-            <button >
+            <h1 >
               <HiChevronDoubleLeft className="text-[#697689]" />
-            </button>
+            </h1>
           </span>
         </div>
       </div>
 
-      <ul className="gap-1 px-4 mx-2 border-b  text-[#787486] flex flex-col lg:text-md text-xs">
-        <li className="flex items-center my-2">
-          <Category size="20" color="#787486" padding="2px" />
-          <span className=" px-2 py-1">Home</span>
-        </li>
+      <div className="gap-1 px-4 mx-2 border-b text-[#787486] flex flex-col lg:text-md text-xs">
+  {dot.length > 0 && dot.map((dap, index) => (
+    <div key={index}>
+      <li className="flex items-center my-2 gap-2">
+        {dap.icon}
+        {dap.title}
+      </li>
+    </div>
+  ))}
+</div>
 
-        <li className="flex items-center my-2 ">
-          <Message size="20" color="#787486" />
-          <span className="text-md px-2 py-1">Messages</span>
-        </li>
-
-        <li className="flex items-center my-2 ">
-          <TaskSquare size="20" color="#787486" />
-          <span className="text-md px-2 py-1">Task</span>
-        </li>
-
-        <li className="flex items-center my-2 ">
-          <Profile2User size="20" color="#787486" />
-          <span className="text-md px-2 py-1">Members</span>
-        </li>
-        <li className="flex items-center my-2 ">
-          <Setting2 size="20" color="#787486" />
-          <span className="text-md px-2 py-1">Setting</span>
-        </li>
-      </ul>
 
       <div className="flex flex-row text-[#697689] lg:text-md text-xs my-1 mx-2 font-bold lg:px-2 px-0 py-1 justify-between">
         <div>MY PROJECTS</div>

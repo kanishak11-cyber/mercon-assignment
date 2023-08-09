@@ -13,16 +13,12 @@ export default function Layout({ children }) {
     >
       <div>
         {open ? (
-
-          <button 
-          
-          onClick={() =>setOpen(false)}>
-<Nav  />
+          <button onClick={() => setOpen(false)} type='button'>
+            <Nav />
           </button>
-          
         ) : (
           <HambergerMenu
-            size="24"
+            size="20"
             color="#787486"
             onClick={() => setOpen(true)}
             className="w-10 h-10 fixed top-4 left-4 z-10"
@@ -32,13 +28,11 @@ export default function Layout({ children }) {
         {/* <Nav /> */}
         <Topbar />
       </div>
-      {open? (
+      {open ? (
         <div className="lg:pl-60 pl-40 pt-20  no-scrollbar ">{children}</div>
-      ):(
-        <div className="pl-0  pt-20  no-scrollbar ">{children}</div>
+      ) : (
+        <div className="pl-0  pt-16  no-scrollbar ">{children}</div>
       )}
-
-      
     </div>
   );
 }

@@ -77,7 +77,7 @@ const TaskBoard = () => {
                         priority,
                         title,
                         description,
-                        image,
+                        img,
                         id,
                         files,
                         comments,
@@ -119,10 +119,10 @@ const TaskBoard = () => {
                                 {title}
                               </h3>
                               {/* Card image */}
-                              {image && (
+                              {img && (
                                 <div className="mt-2">
-                                  <Image 
-                                    src={image}
+                                  <img 
+                                    src={img}
                                     alt=""
                                     className={`h-40 w-full object-cover ${
                                       priority === "completed" &&
@@ -149,10 +149,10 @@ const TaskBoard = () => {
                                 <div className="flex -space-x-2 overflow-hidden">
                                   {users.map((user, index) => {
                                     return (
-                                      <Image 
+                                      <img 
                                         key={index}
                                         className="inline-block h-6 w-6 rounded-full ring-2 ring-white"
-                                        src={user.image}
+                                        src={user.img}
                                         alt="profile"
                                       />
                                     );
